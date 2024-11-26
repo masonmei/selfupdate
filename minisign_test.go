@@ -1,7 +1,7 @@
 package selfupdate
 
 import (
-	"io/ioutil"
+	"os"
 	"testing"
 )
 
@@ -12,7 +12,7 @@ func TestMinisign(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	buf, err := ioutil.ReadFile("LICENSE")
+	buf, err := os.ReadFile("LICENSE")
 	if err != nil {
 		t.Fatal(err)
 	}
